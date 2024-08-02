@@ -103,7 +103,7 @@ int main() {
     double totalBudget;
     cout << "予算を入力してください（例：10000）: ";
     if (!(cin >> totalBudget)) {
-        cerr << "Invalid input for budget." << endl; // 入力エラーが発生した場合のメッセージ
+        cerr << "予算の入力が無効です." << endl; // 入力エラーが発生した場合のメッセージ
         return 1; 
     }
 
@@ -111,7 +111,7 @@ int main() {
     int numBets;
     cout << "予算を分配したいオッズの個数を1～99の範囲から入力してください (例:5): ";
     if (!(cin >> numBets) || numBets < 1 || numBets > 99) {
-        cerr << "Number of odds must be between 1 and 99." << endl; // オッズの数が範囲外の場合のメッセージ
+        cerr << "オッズの数は１から９９の間である必要があります." << endl; // オッズの数が範囲外の場合のメッセージ
         return 1; 
     }
 
@@ -121,7 +121,7 @@ int main() {
 
     for (int i = 0; i < numBets; ++i) {
         if (!(cin >> odds[i])) {
-            cerr << "Invalid input for odds." << endl; // オッズの入力エラー時のメッセージ
+            cerr << "オッズの入力が無効です." << endl; // オッズの入力エラー時のメッセージ
             return 1; 
         }
     }
